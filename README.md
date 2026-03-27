@@ -11,7 +11,7 @@ This project implements a decoupled **ELT (Extract, Load, Transform)** pattern:
    ## 📂 Data Storage (Silver Layer)
 After the PySpark transformation, the data is converted from raw JSON into an optimized **Apache Parquet** format and stored in the Silver Layer of our S3 bucket. This ensures the data is ready for high-performance analytics.
 
-![S3 Silver Layer Screenshot](./Screenshot 2026-03-27 172944.png)
+![S3 Silver Layer Screenshot](./s3_silver_layer.png)
 *Figure 1: Verified Parquet output in AWS S3 silver_layer/ folder.*
 
 
