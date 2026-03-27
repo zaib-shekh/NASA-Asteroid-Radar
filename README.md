@@ -8,6 +8,11 @@ This project implements a decoupled **ELT (Extract, Load, Transform)** pattern:
 1.  **Extraction (Local Python):** A script fetches raw JSON data from the NASA NeoWs API.
 2.  **Bronze Layer (AWS S3):** The raw, immutable JSON data is landed in an S3 bucket for permanent storage.
 3.  **Silver Layer (Databricks & PySpark):** Databricks Serverless compute is used to process the raw data. This includes flattening dynamic JSON arrays, enforcing a strict schema, and optimizing the storage format.
+   ## 📂 Data Storage (Silver Layer)
+After the PySpark transformation, the data is converted from raw JSON into an optimized **Apache Parquet** format and stored in the Silver Layer of our S3 bucket. This ensures the data is ready for high-performance analytics.
+
+![S3 Silver Layer Screenshot](./Screenshot 2026-03-27 172944.png)
+*Figure 1: Verified Parquet output in AWS S3 silver_layer/ folder.*
 
 
 
